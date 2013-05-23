@@ -5,7 +5,7 @@ GWT buttons using the [Zocial CSS](http://zocial.smcllns.com) theme.
 
 Add to your project
 -------------------
-Add the following to your pom.xml file
+Add the following to your pom.xml file (<i>This project is not yet available through Maven</i>)
 
     <dependency>
         <groupId>net.bostrt.gwt</groupId>
