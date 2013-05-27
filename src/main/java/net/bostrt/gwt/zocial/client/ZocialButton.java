@@ -16,4 +16,17 @@ public abstract class ZocialButton extends Button
     {
         ZocialButtonResources.INSTANCE.zocial().ensureInjected();
     }
+
+    /**
+     * Toggle this button between showing text and icon only.
+     * @param iconOnly True to only show icon and hide text. False to show text.
+     */
+    public void setIconOnly(boolean iconOnly)
+    {
+        if(iconOnly) {
+            addStyleName(ZocialButtonResources.INSTANCE.zocial().icon());
+        } else {
+            removeStyleName(ZocialButtonResources.INSTANCE.zocial().icon());
+        }
+    }
 }
