@@ -17,4 +17,10 @@ public class PrimaryButton extends ZocialButton
         setStyleName(ZocialButtonResources.INSTANCE.zocial().zocial());
         addStyleName(ZocialButtonResources.INSTANCE.zocial().primary());
     }
+
+    @Override
+    public void setIconOnly(boolean iconOnly)
+    {
+	// Do nothing. There is no icon for this button
+    }
 }
