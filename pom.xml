@@ -2,13 +2,45 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+      <groupId>org.sonatype.oss</groupId>
+      <artifactId>oss-parent</artifactId>
+      <version>7</version>
+    </parent>
+    
     <groupId>net.bostrt.gwt</groupId>
     <artifactId>zocial</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
-
     <name>GWTZocial</name>
-    <url>http://zocial.smcllns.com</url>
+    <url>https://github.com/bostrt/gwt-zocial</url>
+    <description>GWT support for Zocial CSS buttons. Check out Zocial at http://zocial.smcllns.com/</description>
+    
+    <scm>
+      <url>https://github.com/bostrt/gwt-zocial</url>
+      <connection>scm:git:https://github.com/bostrt/gwt-zocial.git</connection>
+      <developerConnection>scm:git:https://github.com/bostrt/gwt-zocial.git</developerConnection>
+    </scm>
+    
+    <developers>
+      <developer>
+        <id>bostrt</id>
+        <name>Robert</name>
+        <email>bostrt@gmail.com</email>
+        <url>http://www.bostrt.net</url>
+        <roles>
+          <role>developer</role>
+        </roles>
+      </developer>
+    </developers>
+
+    <licenses>
+      <license>
+        <name>The Apache Software License, Version 2.0</name>
+        <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        <distribution>repo</distribution>
+      </license>
+    </licenses>
 
     <properties>
         <maven.compiler.source>1.6</maven.compiler.source>
@@ -66,6 +98,44 @@
                     </execution>
                 </executions>
             </plugin>
-        </plugins>
+            <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-gpg-plugin</artifactId>
+              <version>1.4</version>
+              <executions>
+                <execution>
+                  <id>sign-artifacts</id>
+                  <phase>verify</phase>
+                  <goals>
+                    <goal>sign</goal>
+                  </goals>
+                </execution>
+              </executions>
+            </plugin>            
+            <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-source-plugin</artifactId>
+              <executions>
+                <execution>
+                  <id>attach-sources</id>
+                  <goals>
+                    <goal>jar</goal>
+                  </goals>
+                </execution>
+              </executions>
+            </plugin>
+            <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-javadoc-plugin</artifactId>
+              <executions>
+                <execution>
+                  <id>attach-javadocs</id>
+                  <goals>
+                    <goal>jar</goal>
+                  </goals>
+                </execution>
+              </executions>
+            </plugin>
+         </plugins>
     </build>
 </project>
