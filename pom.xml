@@ -9,7 +9,7 @@
     
     <groupId>net.bostrt.gwt</groupId>
     <artifactId>zocial</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <packaging>jar</packaging>
     <name>GWTZocial</name>
     <url>https://github.com/bostrt/gwt-zocial</url>
